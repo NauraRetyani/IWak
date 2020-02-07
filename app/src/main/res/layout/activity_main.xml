@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -35,7 +36,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/et_layout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="@dimen/_250sdp"
+            android:layout_width="@dimen/_230sdp"
             android:layout_height="@dimen/_40sdp"
             android:layout_below="@id/bar_location"
             android:layout_centerHorizontal="true"
@@ -77,14 +78,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/et_layout"
+            android:layout_marginStart="@dimen/_5sdp"
             android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
             android:layout_marginBottom="@dimen/_8sdp"
             app:cardCornerRadius="@dimen/_10sdp">
 
             <com.synnapps.carouselview.CarouselView
                 android:id="@+id/is_main"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_200sdp"
+                android:layout_height="@dimen/_160sdp"
                 app:fillColor="@android:color/white"
                 app:pageColor="@android:color/transparent"
                 app:radius="@dimen/_4sdp"
@@ -93,6 +96,8 @@
                 app:strokeWidth="@dimen/_1sdp" />
 
         </androidx.cardview.widget.CardView>
+
+
 
     </RelativeLayout>
 

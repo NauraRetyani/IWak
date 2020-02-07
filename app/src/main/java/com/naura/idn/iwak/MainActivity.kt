@@ -10,6 +10,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     val imageContentSlider = intArrayOf(
+        R.drawable.image_1,
+        R.drawable.image_2,
+        R.drawable.image_3
     )
 
     val imageContentListener: ImageListener = object : ImageListener {
