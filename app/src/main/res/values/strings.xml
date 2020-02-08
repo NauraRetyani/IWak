@@ -2,4 +2,24 @@
     <string name="app_name">IWak</string>
     <string name="label_location">Bogor</string>
     <string name="label_hint">Search...</string>
+    <string name="label_name">Nama</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="title">
+        <item>Ikan Mas</item>
+        <item>Ikan Dori</item>
+        <item>Udang</item>
+    </string-array>
+
+    <string-array name="address">
+        <item>Bogor, Indonesia</item>
+        <item>Jakarta, Indonesia</item>
+        <item>Bandung, Indonesia</item>
+    </string-array>
+
+    <string-array name="image">
+        <item>@drawable/image_1</item>
+        <item>@drawable/image_2</item>
+        <item>@drawable/image_3</item>
+    </string-array>
 </resources>
