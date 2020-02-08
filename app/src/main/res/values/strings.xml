@@ -5,6 +5,18 @@
     <string name="label_name">Nama</string>
     <string name="action_settings">Settings</string>
     <string name="user1">Akshay Ruparelia</string>
+    <string name="investasi">Investasi</string>
+    <string name="proyek1">Ikan Mas</string>
+    <string name="location1">Bogor, Indonesia</string>
+    <string name="profit">Keuntungan</string>
+    <string name="contract">Kontrak Investasi</string>
+    <string name="invester">Invester</string>
+    <string name="profit_back">20% per tahun</string>
+    <string name="contract_value">1 tahun</string>
+    <string name="invester_value">238 orang</string>
+    <string name="desc_title">Deskripsi</string>
+    <string name="desc">Peternakan Ikan Mas di Bogor, Indonesia dapat dikembangkan dengan baik hingga saat ini. Jumlah yang sudah dikembangkan hingga saat ini adalah sekitar ribuan ekor ikan Mas, dan juga memiliki sekitar puluhan pelanggan tetap yang membeli ratusan ekor ikan Mas pada tiap bulannya. Kami juga memili puluhan unit dan belasan cabang di seluruh pulau Jawa.</string>
+    <string name="progress">Perkembangan</string>
 
     <string-array name="title">
         <item>Ikan Mas</item>
