@@ -17,6 +17,7 @@
     <string name="desc_title">Deskripsi</string>
     <string name="desc">Peternakan Ikan Mas di Bogor, Indonesia dapat dikembangkan dengan baik hingga saat ini. Jumlah yang sudah dikembangkan hingga saat ini adalah sekitar ribuan ekor ikan Mas, dan juga memiliki sekitar puluhan pelanggan tetap yang membeli ratusan ekor ikan Mas pada tiap bulannya. Kami juga memili puluhan unit dan belasan cabang di seluruh pulau Jawa.</string>
     <string name="progress">Perkembangan</string>
+    <string name="detail">Detail</string>
 
     <string-array name="title">
         <item>Ikan Mas</item>

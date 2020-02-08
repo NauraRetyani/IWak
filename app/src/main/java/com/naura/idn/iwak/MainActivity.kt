@@ -1,19 +1,17 @@
 package com.naura.idn.iwak
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
+import com.naura.idn.iwak.model.FishModel
 import com.synnapps.carouselview.CarouselView
 import com.synnapps.carouselview.ImageListener
 import kotlinx.android.synthetic.main.activity_main.*
+import com.naura.idn.iwak.adapter.RecyclerAdapter as RecyclerAdapter
 
 class MainActivity : AppCompatActivity() {
     private val fishList = ArrayList<FishModel>()
@@ -48,6 +46,7 @@ class MainActivity : AppCompatActivity() {
         rv_main.setHasFixedSize(true)
         fishList.addAll(getListFood())
         showRecyclerList()
+        showSelected()
 
     }
 
@@ -80,5 +79,14 @@ class MainActivity : AppCompatActivity() {
             listFish.add(fish)
         }
         return listFish
+    }
+
+
+    private fun showSelected() {
+        btn_profile.setOnClickListener {
+            val list = Intent(this, ProfileActivity::class.java)
+            startActivity(list)
+
+        }
     }
 }
