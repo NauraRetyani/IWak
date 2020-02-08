@@ -4,6 +4,7 @@
     <string name="label_hint">Search...</string>
     <string name="label_name">Nama</string>
     <string name="action_settings">Settings</string>
+    <string name="user1">Akshay Ruparelia</string>
 
     <string-array name="title">
         <item>Ikan Mas</item>
