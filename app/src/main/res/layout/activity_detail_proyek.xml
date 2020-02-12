@@ -19,7 +19,7 @@
                 android:id="@+id/img_detail_proyek"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_175sdp"
-                android:background="@drawable/image_1"
+                android:background="@drawable/mas"
                 android:contentDescription="@string/detail"
                 android:scaleType="centerCrop" />
 

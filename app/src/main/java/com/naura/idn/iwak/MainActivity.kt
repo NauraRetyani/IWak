@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.widget.ImageView
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.google.android.material.snackbar.Snackbar
+import com.naura.idn.iwak.adapter.StaggeredAdapter
 import com.naura.idn.iwak.model.FishModel
 import com.synnapps.carouselview.CarouselView
 import com.synnapps.carouselview.ImageListener
@@ -17,9 +19,9 @@ class MainActivity : AppCompatActivity() {
     private val fishList = ArrayList<FishModel>()
 
     val imageContentSlider = intArrayOf(
-        R.drawable.image_1,
-        R.drawable.image_2,
-        R.drawable.image_3
+        R.drawable.mas,
+        R.drawable.cakalang,
+        R.drawable.udang
     )
 
     val imageContentListener: ImageListener = object : ImageListener {
@@ -39,14 +41,19 @@ class MainActivity : AppCompatActivity() {
                 .setAction("Action", null).show()
         }
 
+
         val carouselView = is_main as CarouselView
         carouselView.setImageListener(imageContentListener)
         carouselView.setPageCount(imageContentSlider.count())
 
         rv_main.setHasFixedSize(true)
         fishList.addAll(getListFood())
-        showRecyclerList()
-        showSelected()
+        showRecyclerGrid()
+
+        btn_profile.setOnClickListener {
+            val list = Intent(this, ProfileActivity::class.java)
+            startActivity(list)
+        }
 
     }
 
@@ -57,11 +64,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun showRecyclerList() {
-        rv_main.layoutManager = GridLayoutManager(this, 2)
-
-        val listFoodAdapter = RecyclerAdapter(fishList)
-        rv_main.adapter = listFoodAdapter
+    private fun showRecyclerGrid() {
+        val layoutManagerStaggered = StaggeredGridLayoutManager(2, GridLayoutManager.VERTICAL)
+        rv_main.layoutManager = layoutManagerStaggered
+        rv_main.adapter = StaggeredAdapter(fishList)
     }
 
     private fun getListFood(): ArrayList<FishModel> {
@@ -79,14 +85,5 @@ class MainActivity : AppCompatActivity() {
             listFish.add(fish)
         }
         return listFish
-    }
-
-
-    private fun showSelected() {
-        btn_profile.setOnClickListener {
-            val list = Intent(this, ProfileActivity::class.java)
-            startActivity(list)
-
-        }
     }
 }

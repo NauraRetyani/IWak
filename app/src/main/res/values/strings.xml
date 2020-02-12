@@ -20,20 +20,41 @@
     <string name="detail">Detail</string>
 
     <string-array name="title">
-        <item>Ikan Mas</item>
         <item>Ikan Dori</item>
         <item>Udang</item>
+        <item>Ikan Mas</item>
+        <item>Ikan Teri</item>
+        <item>Ikan Kembung</item>
+        <item>Ikan Tuna</item>
+        <item>Ikan Cakalang</item>
+        <item>Ikan Salmon</item>
+        <item>Ikan Lele</item>
+        <item>Ikan Gurame</item>
     </string-array>
 
     <string-array name="address">
         <item>Bogor, Indonesia</item>
         <item>Jakarta, Indonesia</item>
         <item>Bandung, Indonesia</item>
+        <item>Surabaya, Indonesia</item>
+        <item>Malang, Indonesia</item>
+        <item>Semarang, Indonesia</item>
+        <item>Makassar, Indonesia</item>
+        <item>Bandung, Indonesia</item>
+        <item>Surabaya, Indonesia</item>
+        <item>Malang, Indonesia</item>
     </string-array>
 
     <string-array name="image">
-        <item>@drawable/image_1</item>
-        <item>@drawable/image_2</item>
-        <item>@drawable/image_3</item>
+        <item>@drawable/dori</item>
+        <item>@drawable/udang</item>
+        <item>@drawable/mas</item>
+        <item>@drawable/teri</item>
+        <item>@drawable/kembung</item>
+        <item>@drawable/tuna</item>
+        <item>@drawable/cakalang</item>
+        <item>@drawable/salmon</item>
+        <item>@drawable/lele</item>
+        <item>@drawable/gurame</item>
     </string-array>
 </resources>
