@@ -7,5 +7,6 @@ import kotlinx.android.parcel.Parcelize
 data class FishModel(
     var name: String,
     var address: String,
+    var desc: String,
     var image: Int
 ): Parcelable

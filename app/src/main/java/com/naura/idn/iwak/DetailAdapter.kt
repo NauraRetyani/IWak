@@ -9,8 +9,16 @@ import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.item_row_home.view.*
 
 
-class RecyclerAdapter(private val listFishs: ArrayList<FishModel>) :
-    RecyclerView.Adapter<RecyclerAdapter.PopularViewHolder>() {
+class DetailAdapter(private val listener: (FishModel) -> Unit) :
+    RecyclerView.Adapter<DetailAdapter.PopularViewHolder>() {
+    private val listFishs = ArrayList<FishModel>()
+
+    fun setData(items: ArrayList<FishModel>) {
+        listFishs.clear()
+        listFishs.addAll(items)
+        notifyDataSetChanged()
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopularViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_row_home, parent, false)
@@ -20,11 +28,11 @@ class RecyclerAdapter(private val listFishs: ArrayList<FishModel>) :
     override fun getItemCount(): Int = listFishs.size
 
     override fun onBindViewHolder(holder: PopularViewHolder, position: Int) {
-        holder.bind(listFishs[position])
+        holder.bind(listFishs[position], listener)
     }
 
     class PopularViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(fishs: FishModel) {
+        fun bind(fishs: FishModel, listener: (FishModel) -> Unit) {
             with(itemView) {
                 Glide.with(itemView.context)
                     .load(fishs.image)
@@ -32,6 +40,8 @@ class RecyclerAdapter(private val listFishs: ArrayList<FishModel>) :
                     .into(iv_popular)
                 tv_name.text = fishs.name
                 tv_address.text = fishs.address
+
+                itemView.setOnClickListener { listener(fishs) }
             }
         }
     }

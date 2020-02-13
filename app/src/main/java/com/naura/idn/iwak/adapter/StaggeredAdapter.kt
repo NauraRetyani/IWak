@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.naura.idn.iwak.R
-import com.naura.idn.iwak.model.FishModel
+import com.naura.idn.iwak.FishModel
 import kotlinx.android.synthetic.main.item_row_home.view.*
 
 class StaggeredAdapter(private val listStaggered: ArrayList<FishModel>) :
