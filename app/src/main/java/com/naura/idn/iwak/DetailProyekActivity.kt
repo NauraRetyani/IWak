@@ -18,6 +18,8 @@ class DetailProyekActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail_proyek)
         model = intent.getParcelableExtra(KEY_FISH)
 
+        supportActionBar?.hide()
+
         tv_detail_proyek.setText(model?.name)
         tv_detail_address.setText(model?.address)
         tv_detail_desc.setText(model?.desc)

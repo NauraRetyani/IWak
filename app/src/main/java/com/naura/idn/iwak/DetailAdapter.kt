@@ -37,7 +37,7 @@ class DetailAdapter(private val listener: (FishModel) -> Unit) :
                 Glide.with(itemView.context)
                     .load(fishs.image)
                     .apply(RequestOptions().override(300))
-                    .into(iv_popular)
+                    .into(iv_fish)
                 tv_name.text = fishs.name
                 tv_address.text = fishs.address
 

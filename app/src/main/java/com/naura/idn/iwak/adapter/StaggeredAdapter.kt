@@ -31,7 +31,8 @@ class StaggeredAdapter(private val listStaggered: ArrayList<FishModel>) :
                 Glide.with(itemView.context)
                     .load(fish.image)
                     .apply(RequestOptions().override(500))
-                    .into(iv_popular)
+                    .into(iv_fish)
+//                iv_fish.setImageResource(fish.image)
                 tv_name.text = fish.name
                 tv_address.text = fish.address
             }
