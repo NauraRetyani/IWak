@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.naura.idn.iwak.R
-import com.naura.idn.iwak.model.FishModel
+import com.naura.idn.iwak.FishModel
 import kotlinx.android.synthetic.main.item_row_home.view.*
 
 class StaggeredAdapter(private val listener: (FishModel) -> Unit) :
@@ -39,7 +39,8 @@ class StaggeredAdapter(private val listener: (FishModel) -> Unit) :
                 Glide.with(itemView.context)
                     .load(fish.image)
                     .apply(RequestOptions().override(500))
-                    .into(iv_popular)
+                    .into(iv_fish)
+//                iv_fish.setImageResource(fish.image)
                 tv_name.text = fish.name
                 tv_address.text = fish.address
 
