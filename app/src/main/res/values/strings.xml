@@ -10,16 +10,21 @@
     <string name="location1">Bogor, Indonesia</string>
     <string name="profit">Keuntungan</string>
     <string name="contract">Kontrak Investasi</string>
-    <string name="invester">Invester</string>
-    <string name="profit_back">20% per tahun</string>
-    <string name="contract_value">1 tahun</string>
-    <string name="invester_value">238 orang</string>
-    <string name="desc_title">Deskripsi</string>
-    <string name="desc">Peternakan Ikan Mas di Bogor, Indonesia dapat dikembangkan dengan baik hingga saat ini. Jumlah yang sudah dikembangkan hingga saat ini adalah sekitar ribuan ekor ikan Mas, dan juga memiliki sekitar puluhan pelanggan tetap yang membeli ratusan ekor ikan Mas pada tiap bulannya. Kami juga memili puluhan unit dan belasan cabang di seluruh pulau Jawa.</string>
+    <string name="investor1">25</string>
     <string name="progress">Perkembangan</string>
     <string name="detail">Detail</string>
+    <string name="add_to_chart">Add to Chart</string>
+    <string name="dana">Dana yang dibutuhkan</string>
+    <string name="price">Rp 5.000.000,-</string>
+    <string name="investor">Jumlah Investor</string>
+    <string name="time">Batas Waktu</string>
+    <string name="days">2 Minggu</string>
+    <string name="collected">Dana Terkumpul</string>
+    <string name="price2">Rp 2.500.000,-</string>
+    <string name="percent">50%</string>
+    <string name="proposal">LIHAT PROPOSAL</string>
 
-    <string-array name="title">
+    <string-array name="name">
         <item>Ikan Dori</item>
         <item>Udang</item>
         <item>Ikan Mas</item>

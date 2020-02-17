@@ -3,231 +3,238 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".DetailProyekActivity">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/_40sdp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_detail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:contentDescription="@string/detail"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mas" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_172sdp"
+                android:contentDescription="@string/detail"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_detail" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/proyek1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_20sdp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
-                android:id="@+id/img_detail_proyek"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_175sdp"
-                android:background="@drawable/mas"
-                android:contentDescription="@string/detail"
-                android:scaleType="centerCrop" />
-
-            <TextView
-                android:id="@+id/tv_detail_proyek"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_8sdp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="@string/proyek1"
-                android:textColor="@android:color/black"
-                android:textSize="26sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="18dp"
                 android:layout_height="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_4sdp"
-                android:orientation="horizontal"
-                tools:ignore="UseCompoundDrawables">
-
-                <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="@dimen/_20sdp"
-                    android:layout_marginStart="@dimen/_8sdp"
-                    android:contentDescription="@string/detail"
-                    android:src="@drawable/location" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_4sdp"
-                    android:layout_marginTop="@dimen/_1sdp"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:text="@string/location1"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_60sdp"
-                android:layout_marginTop="@dimen/_16sdp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/iv_bibit"
-                    android:layout_width="@dimen/_60sdp"
-                    android:layout_height="@dimen/_60sdp"
-                    android:layout_marginEnd="@dimen/_20sdp"
-                    android:src="@drawable/bibit" />
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/iv_modal"
-                    android:layout_width="@dimen/_60sdp"
-                    android:layout_height="@dimen/_60sdp"
-                    android:layout_marginEnd="@dimen/_20sdp"
-                    android:src="@drawable/money" />
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/iv_worker"
-                    android:layout_width="@dimen/_60sdp"
-                    android:layout_height="@dimen/_60sdp"
-                    android:layout_marginEnd="@dimen/_20sdp"
-                    android:src="@drawable/worker" />
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/iv_perlengkapan"
-                    android:layout_width="@dimen/_60sdp"
-                    android:layout_height="@dimen/_60sdp"
-                    android:src="@drawable/fishing_net" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_8sdp"
-                android:layout_marginTop="@dimen/_21sdp"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.5"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:text="@string/profit"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:text="@string/contract"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:text="@string/invester"
-                        android:textSize="16sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_semi_bold"
-                        android:text="@string/profit_back"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_semi_bold"
-                        android:text="@string/contract_value"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_semi_bold"
-                        android:text="@string/invester_value"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </LinearLayout>
+                android:layout_marginStart="@dimen/_10sdp"
+                android:contentDescription="@string/detail"
+                android:src="@drawable/location" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/location_detail"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_8sdp"
-                android:layout_marginTop="@dimen/_24sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_1sdp"
                 android:fontFamily="@font/montserrat_semi_bold"
-                android:text="@string/desc_title"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:text="@string/location1"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_8sdp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
-                android:fontFamily="@font/montserrat_medium"
-                android:text="@string/desc"
-                android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/dana"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/_10sdp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_8sdp"
-                android:layout_marginTop="@dimen/_16sdp"
-                android:fontFamily="@font/montserrat_semi_bold"
-                android:text="@string/progress"
-                android:textColor="@android:color/black"
-                android:textSize="16sp" />
+        <TextView
+            android:id="@+id/dana_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/price"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_15sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/investor"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/investor_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/investor1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_15sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/time"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/time_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/days"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_15sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/collected"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/collected_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/price2"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_15sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_100sdp"
-                android:layout_margin="@dimen/_8sdp"
-                android:contentDescription="@string/detail"
-                android:src="@drawable/diagram" />
+                android:layout_height="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:contentDescription="@string/detail" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:contentDescription="@string/detail" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="@string/percent"
+                android:textColor="@color/colorPrimary" />
+
         </LinearLayout>
-    </ScrollView>
+
+        <TextView
+            android:id="@+id/btn_proposal_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/proposal"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#81dde6"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="@dimen/_5sdp">
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btn_investasi"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:id="@+id/btn_invest_detail"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
             android:layout_marginEnd="@dimen/_5sdp"
-            android:layout_weight="1"
             android:background="@drawable/edit_button_investasi"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:gravity="center"
             android:text="@string/investasi"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            tools:ignore="ButtonStyle" />
 
-        <ImageView
-            android:id="@+id/iv_add_to_basket"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="6"
-            android:background="@drawable/edit_add_basket"
-            android:contentDescription="@string/detail"
-            android:padding="@dimen/_3sdp"
-            android:src="@drawable/shopping_basket" />
+        <Button
+            android:id="@+id/btn_basket_detail"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/edit_button_chart"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/add_to_chart"
+            android:textColor="@color/colorAccent"
+            tools:ignore="ButtonStyle" />
+
     </LinearLayout>
 </RelativeLayout>

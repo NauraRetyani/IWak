@@ -13,10 +13,11 @@ import com.naura.idn.iwak.model.FishModel
 import com.synnapps.carouselview.CarouselView
 import com.synnapps.carouselview.ImageListener
 import kotlinx.android.synthetic.main.activity_main.*
-import com.naura.idn.iwak.adapter.RecyclerAdapter as RecyclerAdapter
 
 class MainActivity : AppCompatActivity() {
-    private val fishList = ArrayList<FishModel>()
+    //    private val fishList = ArrayList<FishModel>()
+    private lateinit var detailAdapter: StaggeredAdapter
+
 
     val imageContentSlider = intArrayOf(
         R.drawable.mas,
@@ -41,13 +42,10 @@ class MainActivity : AppCompatActivity() {
                 .setAction("Action", null).show()
         }
 
-
         val carouselView = is_main as CarouselView
         carouselView.setImageListener(imageContentListener)
         carouselView.setPageCount(imageContentSlider.count())
 
-        rv_main.setHasFixedSize(true)
-        fishList.addAll(getListFood())
         showRecyclerGrid()
 
         btn_profile.setOnClickListener {
@@ -56,22 +54,8 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
-
-    private fun showRecyclerGrid() {
-        val layoutManagerStaggered = StaggeredGridLayoutManager(2, GridLayoutManager.VERTICAL)
-        rv_main.layoutManager = layoutManagerStaggered
-        rv_main.adapter = StaggeredAdapter(fishList)
-    }
-
-    private fun getListFood(): ArrayList<FishModel> {
-        val dataName = resources.getStringArray(R.array.title)
+    private fun getListFish(): ArrayList<FishModel> {
+        val dataName = resources.getStringArray(R.array.name)
         val dataAddress = resources.getStringArray(R.array.address)
         val dataImage = resources.obtainTypedArray(R.array.image)
 
@@ -85,5 +69,21 @@ class MainActivity : AppCompatActivity() {
             listFish.add(fish)
         }
         return listFish
+    }
+
+    private fun showRecyclerGrid() {
+        detailAdapter = StaggeredAdapter { showSelected(it) }
+        detailAdapter.notifyDataSetChanged()
+        detailAdapter.setData(getListFish())
+        rv_main.setHasFixedSize(true)
+        val layoutManagerStaggered = StaggeredGridLayoutManager(2, GridLayoutManager.VERTICAL)
+        rv_main.layoutManager = layoutManagerStaggered
+        rv_main.adapter = detailAdapter
+    }
+
+    private fun showSelected(it: FishModel) {
+        val detail = Intent(this, DetailProyekActivity::class.java)
+        detail.putExtra(DetailProyekActivity.KEY_DETAIL_PROJECT, it)
+        startActivity(detail)
     }
 }

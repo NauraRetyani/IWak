@@ -10,8 +10,16 @@ import com.naura.idn.iwak.R
 import com.naura.idn.iwak.model.FishModel
 import kotlinx.android.synthetic.main.item_row_home.view.*
 
-class StaggeredAdapter(private val listStaggered: ArrayList<FishModel>) :
+class StaggeredAdapter(private val listener: (FishModel) -> Unit) :
     RecyclerView.Adapter<StaggeredAdapter.ViewHolder>() {
+
+    private val listStaggered = ArrayList<FishModel>()
+
+    fun setData(items: ArrayList<FishModel>) {
+        listStaggered.clear()
+        listStaggered.addAll(items)
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -22,11 +30,11 @@ class StaggeredAdapter(private val listStaggered: ArrayList<FishModel>) :
     override fun getItemCount(): Int = listStaggered.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(listStaggered[position])
+        holder.bind(listStaggered[position], listener)
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(fish: FishModel) {
+        fun bind(fish: FishModel, listener: (FishModel) -> Unit) {
             with(itemView) {
                 Glide.with(itemView.context)
                     .load(fish.image)
@@ -34,6 +42,9 @@ class StaggeredAdapter(private val listStaggered: ArrayList<FishModel>) :
                     .into(iv_popular)
                 tv_name.text = fish.name
                 tv_address.text = fish.address
+
+                itemView.setOnClickListener { listener(fish) }
+
             }
         }
     }

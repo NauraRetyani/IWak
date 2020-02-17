@@ -8,4 +8,5 @@ data class FishModel(
     var name: String,
     var address: String,
     var image: Int
-): Parcelable
+
+) : Parcelable
