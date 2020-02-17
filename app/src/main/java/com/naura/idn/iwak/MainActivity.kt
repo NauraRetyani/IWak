@@ -3,13 +3,11 @@ package com.naura.idn.iwak
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
 import android.widget.ImageView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import com.naura.idn.iwak.adapter.StaggeredAdapter
-import com.naura.idn.iwak.model.FishModel
 import com.synnapps.carouselview.CarouselView
 import com.synnapps.carouselview.ImageListener
 import kotlinx.android.synthetic.main.activity_main.*
@@ -57,6 +55,7 @@ class MainActivity : AppCompatActivity() {
     private fun getListFish(): ArrayList<FishModel> {
         val dataName = resources.getStringArray(R.array.name)
         val dataAddress = resources.getStringArray(R.array.address)
+        val dataDesc = resources.getStringArray(R.array.desc)
         val dataImage = resources.obtainTypedArray(R.array.image)
 
         val listFish = ArrayList<FishModel>()
@@ -64,6 +63,7 @@ class MainActivity : AppCompatActivity() {
             val fish = FishModel(
                 dataName[position],
                 dataAddress[position],
+                dataDesc[position],
                 dataImage.getResourceId(position, -1)
             )
             listFish.add(fish)

@@ -18,7 +18,7 @@
             android:foreground="@drawable/top_background">
 
             <ImageView
-                android:id="@+id/iv_popular"
+                android:id="@+id/iv_fish"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/label_name"
