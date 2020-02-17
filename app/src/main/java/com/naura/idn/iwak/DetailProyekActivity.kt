@@ -18,8 +18,9 @@ class DetailProyekActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_proyek)
+        supportActionBar?.hide()
 
-//        fish = intent.getParcelableExtra(KEY_DETAIL_PROJECT)
+        fish = intent.getParcelableExtra(KEY_DETAIL_PROJECT)
 
         title_detail.text = fish?.name
         location_detail.text = fish?.address
